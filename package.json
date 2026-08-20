@@ -1,0 +1,22 @@
+{
+  "name": "poverty-support-system",
+  "version": "1.0.0",
+  "description": "Wereda Poverty Support Registration, Assessment, Beneficiary Management and Accountability System",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "db:migrate": "npm run db:migrate --prefix server",
+    "db:seed": "npm run db:seed --prefix server",
+    "db:rollback": "npm run db:rollback --prefix server",
+    "lint": "npm run lint --prefix server && npm run lint --prefix client",
+    "test": "npm run test --prefix server && npm run test --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "uuid": "^14.0.2"
+  }
+}

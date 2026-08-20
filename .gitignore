@@ -1,0 +1,36 @@
+# Environment
+.env
+.env.local
+.env.production
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+client/dist/
+client/build/
+server/dist/
+
+# Uploads / file storage
+server/uploads/
+
+# Logs
+*.log
+logs/
+
+# Database backups
+database/backups/*.sql
+database/backups/*.dump
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Test coverage
+coverage/
+*/coverage/

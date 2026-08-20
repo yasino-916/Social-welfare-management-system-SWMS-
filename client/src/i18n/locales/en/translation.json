@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Wereda Poverty Support System",
+    "subtitle": "Registration & Accountability",
+    "footer": "© {{year}} Wereda Poverty Support System. All rights reserved."
+  },
+  "nav": {
+    "login": "Staff Login",
+    "logout": "Sign Out",
+    "dashboard": "Dashboard",
+    "households": "Households",
+    "applications": "Applications",
+    "kebeleList": "Kebele List",
+    "weredaReview": "Wereda Review",
+    "beneficiaries": "Beneficiaries",
+    "support": "Support",
+    "complaints": "Complaints",
+    "feedback": "Feedback",
+    "reports": "Reports",
+    "users": "Users",
+    "kebeles": "Kebeles",
+    "audit": "Audit Trail",
+    "notifications": "Notifications"
+  },
+  "public": {
+    "home": {
+      "heading": "Wereda Poverty Support System",
+      "subheading": "Register your household, track your application, or submit feedback and complaints."
+    },
+    "register": {
+      "title": "Register New Applicant",
+      "description": "Register your household and family members for poverty support consideration."
+    },
+    "status": {
+      "title": "Check Application Status",
+      "description": "Track your application using your reference number."
+    },
+    "feedback": {
+      "title": "Submit Feedback",
+      "description": "Share your experience or suggestions about our services."
+    },
+    "complaint": {
+      "title": "Submit a Complaint",
+      "description": "Report an issue or concern. Anonymous submissions are allowed."
+    }
+  }
+}

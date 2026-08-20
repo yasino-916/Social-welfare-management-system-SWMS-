@@ -1,0 +1,43 @@
+version: '3.9'
+
+# Lightweight test environment — isolated DB, no volumes persisted
+services:
+  db_test:
+    image: postgres:16-alpine
+    container_name: poverty_support_db_test
+    environment:
+      POSTGRES_DB: poverty_support_test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    tmpfs:
+      - /var/lib/postgresql/data   # in-memory, wiped after tests
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d poverty_support_test"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  api_test:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: poverty_support_api_test
+    depends_on:
+      db_test:
+        condition: service_healthy
+    environment:
+      NODE_ENV: test
+      PORT: 5001
+      DB_HOST: db_test
+      DB_PORT: 5432
+      DB_NAME: poverty_support_test
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      JWT_SECRET: test_secret_key
+      JWT_EXPIRES_IN: 1h
+      AUDIT_LOG_ENABLED: false
+      EMAIL_ENABLED: false
+      SMS_ENABLED: false
+    command: npm run test

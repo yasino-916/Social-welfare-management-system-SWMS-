@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "የወረዳ የድህነት ድጋፍ ሥርዓት",
+    "subtitle": "ምዝገባ እና ተጠያቂነት",
+    "footer": "© {{year}} የወረዳ የድህነት ድጋፍ ሥርዓት። መብቱ የተጠበቀ ነው።"
+  },
+  "nav": {
+    "login": "ሠራተኛ መግቢያ",
+    "logout": "ውጣ",
+    "dashboard": "ዳሽቦርድ",
+    "households": "ቤተሰቦች",
+    "applications": "ማመልከቻዎች",
+    "kebeleList": "የቀበሌ ዝርዝር",
+    "weredaReview": "የወረዳ ግምገማ",
+    "beneficiaries": "ተጠቃሚዎች",
+    "support": "ድጋፍ",
+    "complaints": "ቅሬታዎች",
+    "feedback": "አስተያየት",
+    "reports": "ሪፖርቶች",
+    "users": "ተጠቃሚዎች",
+    "kebeles": "ቀበሌዎች",
+    "audit": "የኦዲት መዛግብት",
+    "notifications": "ማሳወቂያዎች"
+  },
+  "public": {
+    "home": {
+      "heading": "የወረዳ የድህነት ድጋፍ ሥርዓት",
+      "subheading": "ቤተሰብዎን ይመዝግቡ፣ ማመልከቻዎን ይከታተሉ፣ ወይም አስተያየትና ቅሬታ ያቅርቡ።"
+    },
+    "register": {
+      "title": "አዲስ አመልካች ይመዝገቡ",
+      "description": "ቤተሰብዎን እና አባሎቻቸውን ለድህነት ድጋፍ ይመዝግቡ።"
+    },
+    "status": {
+      "title": "የማመልከቻ ሁኔታ ያረጋግጡ",
+      "description": "የማጣቀሻ ቁጥርዎን በመጠቀም ማመልከቻዎን ይከታተሉ።"
+    },
+    "feedback": {
+      "title": "አስተያየት ያቅርቡ",
+      "description": "ስለ አገልግሎቶቻችን ልምዳቸውን ወይም ሀሳቦቻቸውን ያካፍሉ።"
+    },
+    "complaint": {
+      "title": "ቅሬታ ያቅርቡ",
+      "description": "ችግር ወይም ስጋትዎን ሪፖርት ያድርጉ። ስም-አልባ ማቅረቢያ ይፈቀዳል።"
+    }
+  }
+}
