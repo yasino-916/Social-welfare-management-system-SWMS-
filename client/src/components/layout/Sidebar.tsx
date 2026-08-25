@@ -57,7 +57,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
       >
         {/* Logo */}
         <div className="p-5 border-b border-slate-700">
-          <p className="font-bold text-sm leading-tight">Wereda Poverty Support</p>
+          <p className="font-bold text-sm leading-tight">Wereda Social Welfare</p>
           <p className="text-slate-400 text-xs mt-0.5">Management System</p>
         </div>
 

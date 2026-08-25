@@ -5,7 +5,7 @@ set -e
 
 source .env 2>/dev/null || true
 
-DB_NAME="${DB_NAME:-poverty_support_db}"
+DB_NAME="${DB_NAME:-social_welfare_db}"
 DB_USER="${DB_USER:-postgres}"
 DB_HOST="${DB_HOST:-localhost}"
 DB_PORT="${DB_PORT:-5432}"

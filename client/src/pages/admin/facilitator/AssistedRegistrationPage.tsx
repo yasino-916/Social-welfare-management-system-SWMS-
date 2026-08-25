@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import PageHeader from '@/components/common/PageHeader';
 import apiClient from '@/services/api/client';
 import { householdApi } from '@/services/api/householdApi';
-import { personApi } from '@/services/api/personApi';
+
 
 export default function AssistedRegistrationPage() {
   const navigate = useNavigate();
@@ -73,7 +73,7 @@ export default function AssistedRegistrationPage() {
 
       return hh;
     },
-    onSuccess: (hh) => {
+    onSuccess: () => {
       toast.success('Registration successful! Application submitted.');
       navigate('/households');
     },

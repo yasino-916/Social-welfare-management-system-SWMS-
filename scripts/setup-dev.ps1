@@ -1,7 +1,7 @@
 # setup-dev.ps1
 # Windows PowerShell — one-time local development setup
 
-Write-Host "=== Wereda Poverty Support System — Dev Setup ===" -ForegroundColor Cyan
+Write-Host "=== Wereda Social Welfare System — Dev Setup ===" -ForegroundColor Cyan
 
 # 1. Copy .env if it doesn't exist
 if (-not (Test-Path ".env")) {

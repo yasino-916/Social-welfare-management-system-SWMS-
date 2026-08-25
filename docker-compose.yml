@@ -4,10 +4,10 @@ services:
   # ── PostgreSQL Database ──────────────────────────────────────────────────────
   db:
     image: postgres:16-alpine
-    container_name: poverty_support_db
+    container_name: social_welfare_db
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${DB_NAME:-poverty_support_db}
+      POSTGRES_DB: ${DB_NAME:-social_welfare_db}
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
     volumes:
@@ -16,7 +16,7 @@ services:
     ports:
       - "${DB_PORT:-5432}:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-poverty_support_db}"]
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-social_welfare_db}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -26,7 +26,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    container_name: poverty_support_api
+    container_name: social_welfare_api
     restart: unless-stopped
     depends_on:
       db:
@@ -36,7 +36,7 @@ services:
       PORT: 5000
       DB_HOST: db
       DB_PORT: 5432
-      DB_NAME: ${DB_NAME:-poverty_support_db}
+      DB_NAME: ${DB_NAME:-social_welfare_db}
       DB_USER: ${DB_USER:-postgres}
       DB_PASSWORD: ${DB_PASSWORD:-postgres}
       JWT_SECRET: ${JWT_SECRET:-change_this_in_production}
@@ -64,7 +64,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    container_name: poverty_support_client
+    container_name: social_welfare_client
     restart: unless-stopped
     depends_on:
       - api
@@ -76,7 +76,7 @@ services:
   # ── Nginx Reverse Proxy (production-style routing) ───────────────────────────
   nginx:
     image: nginx:1.25-alpine
-    container_name: poverty_support_nginx
+    container_name: social_welfare_nginx
     restart: unless-stopped
     depends_on:
       - api

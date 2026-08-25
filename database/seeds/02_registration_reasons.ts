@@ -7,7 +7,7 @@ export async function seed(knex: Knex): Promise<void> {
   await knex('registration_reasons').del();
 
   await knex('registration_reasons').insert([
-    { code: 'extreme_poverty',     label_en: 'Extreme poverty',                                     label_am: 'ከፍተኛ ድህነት',                        requires_description: false, display_order: 1 },
+    { code: 'extreme_hardship',    label_en: 'Extreme hardship',                                    label_am: 'ከፍተኛ ችግር',                        requires_description: false, display_order: 1 },
     { code: 'food_insecurity',     label_en: 'Food insecurity',                                     label_am: 'የምግብ ዋስትና ማጣት',                    requires_description: false, display_order: 2 },
     { code: 'unemployment',        label_en: 'Unemployment',                                        label_am: 'ሥራ አጥነት',                           requires_description: false, display_order: 3 },
     { code: 'lack_stable_income',  label_en: 'Lack of stable income',                               label_am: 'የተረጋጋ ገቢ አለመኖር',                  requires_description: false, display_order: 4 },

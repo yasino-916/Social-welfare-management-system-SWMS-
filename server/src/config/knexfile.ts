@@ -14,7 +14,7 @@ const config: { [key: string]: Knex.Config } = {
     connection: {
       host:     process.env.DB_HOST     || 'localhost',
       port:     Number(process.env.DB_PORT) || 5432,
-      database: process.env.DB_NAME     || 'poverty_support_db',
+      database: process.env.DB_NAME     || 'social_welfare_db',
       user:     process.env.DB_USER     || 'postgres',
       password: process.env.DB_PASSWORD || '',
     },
@@ -36,7 +36,7 @@ const config: { [key: string]: Knex.Config } = {
     connection: {
       host:     process.env.DB_HOST       || 'localhost',
       port:     Number(process.env.DB_PORT) || 5432,
-      database: process.env.DB_NAME_TEST  || 'poverty_support_test',
+      database: process.env.DB_NAME_TEST  || 'social_welfare_test',
       user:     process.env.DB_USER       || 'postgres',
       password: process.env.DB_PASSWORD   || '',
     },

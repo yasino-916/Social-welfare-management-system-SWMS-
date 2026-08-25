@@ -10,7 +10,7 @@ export async function up(knex: Knex): Promise<void> {
     t.uuid('id').primary().defaultTo(knex.raw('gen_random_uuid()'));
     t.uuid('application_id').notNullable().references('id').inTable('applications').onDelete('CASCADE');
     t.uuid('person_id').nullable().references('id').inTable('persons').onDelete('SET NULL');
-    t.string('document_type', 100).notNullable(); // e.g. NATIONAL_ID, RESIDENCE, POVERTY_PROOF
+    t.string('document_type', 100).notNullable(); // e.g. NATIONAL_ID, RESIDENCE, WELFARE_PROOF
     t.string('document_number', 100).nullable();
     t.string('file_path', 512).notNullable();
     t.string('mime_type', 100).notNullable();

@@ -4,9 +4,9 @@ version: '3.9'
 services:
   db_test:
     image: postgres:16-alpine
-    container_name: poverty_support_db_test
+    container_name: social_welfare_db_test
     environment:
-      POSTGRES_DB: poverty_support_test
+      POSTGRES_DB: social_welfare_test
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
@@ -14,7 +14,7 @@ services:
     tmpfs:
       - /var/lib/postgresql/data   # in-memory, wiped after tests
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d poverty_support_test"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d social_welfare_test"]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -23,7 +23,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    container_name: poverty_support_api_test
+    container_name: social_welfare_api_test
     depends_on:
       db_test:
         condition: service_healthy
@@ -32,7 +32,7 @@ services:
       PORT: 5001
       DB_HOST: db_test
       DB_PORT: 5432
-      DB_NAME: poverty_support_test
+      DB_NAME: social_welfare_test
       DB_USER: postgres
       DB_PASSWORD: postgres
       JWT_SECRET: test_secret_key

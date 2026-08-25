@@ -1,7 +1,7 @@
 {
-  "name": "poverty-support-system",
+  "name": "social-welfare-system",
   "version": "1.0.0",
-  "description": "Wereda Poverty Support Registration, Assessment, Beneficiary Management and Accountability System",
+  "description": "Wereda Social Welfare Registration, Assessment, Beneficiary Management and Accountability System",
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",

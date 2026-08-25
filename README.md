@@ -1,6 +1,6 @@
-# Wereda Poverty Support Registration, Assessment, Beneficiary Management and Accountability System
+# Wereda Social Welfare Registration, Assessment, Beneficiary Management and Accountability System
 
-A Wereda-level household-centered poverty support registration and accountability platform.
+A Wereda-level household-centered social welfare registration and accountability platform.
 
 ## Overview
 
@@ -26,7 +26,7 @@ This system provides:
 ## Project Structure
 
 ```
-Poverty_support/
+Social_welfare/
 ├── client/          # React frontend
 ├── server/          # Node.js/Express backend
 ├── database/        # Migrations, seeds, schema

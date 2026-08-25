@@ -29,8 +29,8 @@ export async function login(
     full_name: user.full_name,
   };
 
-  const token = jwt.sign(payload, jwtConfig.secret, {
-    expiresIn: jwtConfig.expiresIn,
+  const token = jwt.sign(payload, jwtConfig.secret as string, {
+    expiresIn: jwtConfig.expiresIn as any,
   });
 
   await writeAuditLog({

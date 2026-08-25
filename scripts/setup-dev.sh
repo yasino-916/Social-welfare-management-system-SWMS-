@@ -3,7 +3,7 @@
 # Unix/macOS — one-time local development setup
 set -e
 
-echo "=== Wereda Poverty Support System — Dev Setup ==="
+echo "=== Wereda Social Welfare System — Dev Setup ==="
 
 # 1. Copy .env if it doesn't exist
 if [ ! -f .env ]; then

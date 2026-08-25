@@ -64,7 +64,7 @@ export async function seed(knex: Knex): Promise<void> {
   const household2Id = uuidv4();
 
   const reasonRow = await knex('registration_reasons').where('code', 'female_headed').first();
-  const povertyReason = await knex('registration_reasons').where('code', 'extreme_poverty').first();
+  const hardshipReason = await knex('registration_reasons').where('code', 'extreme_hardship').first();
 
   await knex('households').insert([
     {
@@ -82,7 +82,7 @@ export async function seed(knex: Knex): Promise<void> {
       household_head_person_id: persons[3].id,
       village: 'Kebele 01 Area B',
       household_size: 1,
-      registration_reason_id: povertyReason?.id,
+      registration_reason_id: hardshipReason?.id,
       status: 'SUBMITTED',
     },
   ]);

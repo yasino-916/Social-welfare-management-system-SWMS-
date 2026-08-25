@@ -1,8 +1,8 @@
 {
   "site": {
-    "title": "Wereda Poverty Support System",
+    "title": "Wereda Social Welfare System",
     "subtitle": "Registration & Accountability",
-    "footer": "© {{year}} Wereda Poverty Support System. All rights reserved."
+    "footer": "© {{year}} Wereda Social Welfare System. All rights reserved."
   },
   "nav": {
     "login": "Staff Login",
@@ -24,12 +24,12 @@
   },
   "public": {
     "home": {
-      "heading": "Wereda Poverty Support System",
+      "heading": "Wereda Social Welfare System",
       "subheading": "Register your household, track your application, or submit feedback and complaints."
     },
     "register": {
       "title": "Register New Applicant",
-      "description": "Register your household and family members for poverty support consideration."
+      "description": "Register your household and family members for social welfare consideration."
     },
     "status": {
       "title": "Check Application Status",

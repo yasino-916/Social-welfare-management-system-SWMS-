@@ -12,7 +12,7 @@ export default function UsersPage() {
   const { t } = useTranslation();
   const [users, setUsers] = useState<User[]>([]);
   const [kebeles, setKebeles] = useState<Kebele[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [, setLoading] = useState(true);
   const [error, setError] = useState('');
   
   const [isModalOpen, setIsModalOpen] = useState(false);

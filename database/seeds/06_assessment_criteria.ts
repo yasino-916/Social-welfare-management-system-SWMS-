@@ -9,7 +9,7 @@ export async function seed(knex: Knex): Promise<void> {
   await knex('assessment_criteria').del();
 
   await knex('assessment_criteria').insert([
-    { name: 'Income Level',           description: 'Monthly household income below poverty line',         max_score: 20, is_active: true },
+    { name: 'Income Level',           description: 'Monthly household income below welfare threshold',    max_score: 20, is_active: true },
     { name: 'Food Security',          description: 'Frequency and adequacy of daily meals',               max_score: 15, is_active: true },
     { name: 'Housing Condition',      description: 'Quality and stability of household shelter',          max_score: 10, is_active: true },
     { name: 'Employment Status',      description: 'Number of employed adults in the household',          max_score: 10, is_active: true },

@@ -7,7 +7,7 @@ BACKUP_FILE="$1"
 
 if [ -z "$BACKUP_FILE" ]; then
   echo "Usage: ./restore-db.sh <backup_file>"
-  echo "Example: ./restore-db.sh database/backups/backup_poverty_support_db_20260818_120000.dump"
+  echo "Example: ./restore-db.sh database/backups/backup_social_welfare_db_20260818_120000.dump"
   exit 1
 fi
 
@@ -18,7 +18,7 @@ fi
 
 source .env 2>/dev/null || true
 
-DB_NAME="${DB_NAME:-poverty_support_db}"
+DB_NAME="${DB_NAME:-social_welfare_db}"
 DB_USER="${DB_USER:-postgres}"
 DB_HOST="${DB_HOST:-localhost}"
 DB_PORT="${DB_PORT:-5432}"

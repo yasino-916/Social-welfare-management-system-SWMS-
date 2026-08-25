@@ -30,7 +30,7 @@ export async function createAssessment(data: Record<string, unknown>, assessedBy
 }
 
 export async function updateAssessment(id: string, data: Record<string, unknown>, updatedBy: string) {
-  const allowed = { ...data, updated_at: new Date() };
+  const allowed: any = { ...data, updated_at: new Date() };
   delete allowed.id;
   delete allowed.application_id;
   await db('assessments').where({ id }).update(allowed);

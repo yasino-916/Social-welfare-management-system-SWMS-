@@ -1,6 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import { useAuth } from './context/AuthContext';
 import { UserRole } from './types/enums';
 
 // Layouts
@@ -24,7 +23,6 @@ import NotificationsPage from './pages/notifications/NotificationsPage';
 
 // Users
 import UsersPage from './pages/users/UsersPage';
-import UserFormPage from './pages/users/UserFormPage';
 
 // Kebele / Wereda config
 import KebelePage from './pages/admin/wereda/KebelePage';
@@ -88,8 +86,6 @@ export default function App() {
         {/* Super Admin only */}
         <Route element={<RoleRoute roles={[UserRole.SUPER_ADMIN]} />}>
           <Route path="/users" element={<UsersPage />} />
-          <Route path="/users/new" element={<UserFormPage />} />
-          <Route path="/users/:id/edit" element={<UserFormPage />} />
           <Route path="/wereda" element={<WeredaPage />} />
           <Route path="/kebeles" element={<KebelePage />} />
           <Route path="/applications/wereda-review" element={<WeredaAuthorizationPage />} />

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+
 import { Plus, Edit, Trash2, X, Save } from 'lucide-react';
 import PageHeader from '@/components/common/PageHeader';
 import { kebeleApi, Kebele } from '@/services/api/kebeleApi';
 
 export default function KebelePage() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [kebeles, setKebeles] = useState<Kebele[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
